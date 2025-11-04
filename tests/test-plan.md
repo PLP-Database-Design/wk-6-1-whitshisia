@@ -49,13 +49,13 @@ Focus on risk-based coverage: cart → checkout → payment flow, accessibility,
 ---
 
 ## 5. Tools & Extensions
-- Test case mgmt: GitHub Projects (board link)  
+- Test case mgmt: Jira  
 - Exploratory notes: RapidReporter 2.3  
 - A11y: axe-core 4.9, WAVE, Lighthouse a11y audit  
 - Perf: Lighthouse CI, WebPageTest, React Profiler  
 - Network: MSW 2.1 for mock latency/errors  
-- Automation: Cypress 13 (e2e), React Testing Library (unit)  
-- CSV validation: Python `pandas` + `pytest`  
+- Automation: Cypress 13 (e2e), React Testing Library (unit),Selenium  
+- CSV validation:  `pytest`  
 - Security: OWASP ZAP baseline scan
 
 ---
@@ -65,9 +65,9 @@ Focus on risk-based coverage: cart → checkout → payment flow, accessibility,
 |------|--------|------------|------------|
 | Paystack test key expires | High | Low | Alert 3 days before; key rotation script |
 | Stock race condition | Major | Medium | Add pessimistic UI lock, test with 2 tabs |
+|Currency Mismatch (UI vs. Paystack)|Major|Medium|Explicitly test with REACT_APP_CURRENCY set to a non-default value (e.g., USD) and verify UI presentation matches the gateway's expected currency.|
 | CSV export decimal comma | Minor | High | Post-process with `locale=EN-us` |
 | Seeded XSS flagged by client | Major | Low | Document in test report; use safe markdown lib |
-
 ---
 
 ## 7. Test Types & Coverage Targets
