@@ -41,7 +41,7 @@ Focus on risk-based coverage: cart → checkout → payment flow, accessibility,
 ## 4. Environments
 | Tier | URL | Browsers | Devices | Throttling |
 |------|-----|----------|---------|------------|
-| Local | `http://localhost:3000` | Chrome Version 142.0.7444.60 (Official Build) (64-bit),| Windows 11 14inch Laptop, samsung A34 | None |
+| Local | `http://localhost:3000` | Chrome Version 142.0.7444.60 (Official Build) (64-bit),| Windows 11 14inch Laptop, samsung A34,iphone 12 pro | None |
 
 
 
@@ -71,31 +71,21 @@ Focus on risk-based coverage: cart → checkout → payment flow, accessibility,
 ---
 
 ## 7. Test Types & Coverage Targets
-| Type | Technique | Target Metric |
-|------|-----------|---------------|
-| Functional | Black-box + API mocking | 100 % of P1 flows, 80 % P2 |
-| Accessibility | WCAG 2.1 AA checklist | 0 critical violations |
-| Performance | Lighthouse CI | LCP ≤ 2.5 s, TTI ≤ 1 s, 90+ score |
-| Compatibility | Cross-browser matrix | No P1 bugs on latest 2 versions |
-| Security | OWASP Top-10 lite | Zero high-severity alerts |
-| Exploratory | Session-based (90 min) | ≥ 5 sessions/week, 30 bugs logged |
-| Regression | Automated smoke | ≤ 5 min runtime, 100 % pass before merge |
+| **Test Type**                      | **Description**                                                                                                                                                       |
+| ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Functional Testing**             | Ensures all bookstore features (book listing, add to cart, checkout, Paystack integration, admin guard, and routing) work correctly according to requirements.        |
+| **Accessibility (a11y) Testing**   | Checks that all UI elements are accessible, properly labeled, and usable with assistive technologies such as screen readers and keyboard navigation.                  |
+| **Performance Testing**            | Measures the app’s load speed, responsiveness, and stability — ensuring efficient performance under normal and heavy usage.                                           |
+| **Compatibility Testing**          | Verifies the app behaves consistently across different browsers (Chrome, Firefox, Safari, Edge) and on both desktop and mobile devices.                               |
+| **Hygiene / Code Quality Testing** | Focuses on code cleanliness, adherence to best practices, and security hygiene — checking for vulnerabilities, outdated dependencies, and coding standard compliance. |
 
----
 
 ## 8. Entry & Exit Criteria
-### Entry
-- Code freeze 24 h before test cycle  
-- Staging deployment green on CI  
-- Test data seeded (`/data/seed.json` v1.3)
+| **Criteria Type**  | **Description**                                                                                                                                                                                                                                                                                                                   |
+| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Entry Criteria** | - All bookstore features are developed and merged into the main branch.<br>- Test environment (development or staging) is set up and stable.<br>- Test data (books, users, payment sandbox) prepared.<br>- Functional build passes without critical errors.<br>- Required tools (browsers, a11y and performance tools) available. |
+| **Exit Criteria**  | - All planned test cases executed and documented.<br>- No critical or high-severity defects remain unresolved.<br>- Accessibility, performance, and compatibility targets met.<br>- Code review and hygiene checks completed.<br>- Final test summary reviewed and approved by QA lead or instructor.                             |
 
-### Exit
-- All P1 defects closed or accepted by PO  
-- No critical a11y or security issues  
-- Performance budget met on 3 consecutive runs  
-- Traceability matrix ≥ 90 % FR covered with evidence
-
----
 
 ## 9. Deliverables & Schedule
 | Artifact | Due | Owner |
@@ -112,8 +102,7 @@ Focus on risk-based coverage: cart → checkout → payment flow, accessibility,
 | Role | Name | Signature | Date |
 |------|------|-----------|------|
 | QA Lead | Asmamaw Yismaw | AY | Nov 02, 2025 |
-| Dev Lead | Jostina Mwamburi | JM | Nov 02, 2025 |
-| Product Owner | Whitney Shisia | WS | Nov 02, 2025 |
+| Risk Analytics | Jostina Mwamburi | JM | Nov 02, 2025 |
+| Text Executor | Whitney Shisia | WS | Nov 04, 2025 |
 
 ---
-
